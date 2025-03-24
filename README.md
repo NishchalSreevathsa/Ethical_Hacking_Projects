@@ -128,3 +128,48 @@ Utilized an SMB vulnerability (MS09-50) to gain access to the Windows machine.
 Established persistence using Meterpreter.
 **Conclusion:** This lab demonstrated the dangers of misconfigured web applications and the potential for lateral movement within a network. It emphasized the need for proper patch management, secure configurations, and network segmentation. The exercise also showcased how attackers can chain multiple exploits to deeply penetrate a network.
 
+**Project 11: Performing SQL Injection to Manipulate Tables in a Database**
+**Objective:**  This lab focused on exploiting a MySQL database through SQL injection techniques, aiming to gain unauthorized access, manipulate database tables, and create a backdoor for persistent control.
+**Key Tools and Terminologies:** 
+Nmap: Used for scanning the network to identify open ports (e.g., port 3306 for MySQL). 
+Metasploit Framework: Utilized for brute-forcing MySQL credentials and exploiting the database.
+SQL Injection: A technique to manipulate database queries by injecting malicious SQL code.
+MySQL Database: The target database system used in this lab.
+**Key Activities:**
+Reconnaissance and Scanning: Conducted a network scan using Nmap to locate the MySQL service running on port 3306.
+Brute Force Attack: Used Metasploit's MySQL login auxiliary module to crack the administrator credentials with a dictionary attack.
+Database Exploitation: Logged into the MySQL database using the obtained credentials and explored its structure. Created a new user named "hacker" with administrative privileges to establish a backdoor.
+Post-Exploitation Tasks: Manipulated tables in the database and maintained unauthorized access for future exploitation.
+**Conclusion:** This lab demonstrated how SQL injection and weak authentication can compromise sensitive databases. It emphasized the importance of secure configurations, strong password policies, and regular security audits to protect against such attacks.
+
+**Project 12: Breaking WEP and WPA and Decrypting the Traffic**
+**Objective:** This lab explored vulnerabilities in wireless security protocols (WEP and WPA), focusing on decrypting wireless traffic using tools in Kali Linux.
+**Key Tools and Terminologies**
+iwconfig & airmon-ng: Tools for configuring wireless interfaces and enabling monitor mode.
+aircrack-ng & airdecap-ng: Used for cracking WEP keys/WPA passphrases and decrypting captured traffic.
+Wireshark: Analyzed encrypted and decrypted wireless traffic.
+WEP & WPA Protocols: Encryption standards targeted during this lab.
+**Key Activities**
+WEP Decryption: 
+Captured WEP-encrypted traffic using airmon-ng in monitor mode.
+Cracked the WEP key with aircrack-ng and decrypted the traffic using airdecap-ng.
+WPA Decryption:
+Captured WPA-encrypted traffic.
+Used aircrack-ng to crack the WPA passphrase and airdecap-ng to decrypt the traffic.
+Traffic Analysis with Wireshark.
+Verified successful decryption by comparing encrypted vs. plaintext data in Wireshark.
+**Conclusion:** This lab highlighted the weaknesses of older wireless encryption protocols like WEP, which can be easily cracked, as well as vulnerabilities in WPA when subjected to dictionary attacks. It emphasized the importance of using modern encryption standards like WPA3 for securing wireless networks.
+
+**Project 13: Attacking the Firewall and Stealing Data Over an Encrypted Channel**
+**Objective: **This lab simulated an attack on a web application behind a firewall, leveraging vulnerabilities to steal sensitive data over an encrypted channel.
+**Key Tools and Terminologies**
+Nmap/Zenmap: Scanned for open ports on the firewall (e.g., Apache WebDAV on port 80).
+Metasploit & Meterpreter Payloads: Exploited WebDAV vulnerabilities and pivoted within the internal network.
+SMB Protocol (MS09-50): Targeted for lateral movement within the network.
+**Key Activities**
+Reconnaissance and Scanning: Identified open ports on the firewall using Nmap/Zenmap. Located Apache WebDAV services vulnerable to exploitation.
+Exploitation of WebDAV Vulnerability: Used Metasploit to exploit default WebDAV credentials on XAMPP servers. Gained initial access to the web server via Meterpreter payloads.
+Pivoting and Lateral Movement: Leveraged Meterpreter's autoroute feature to pivot into the internal network. Exploited an SMB vulnerability (MS09-50) on a Windows server to gain further access.
+Data Exfiltration Over Encrypted Channels: Stole sensitive data (e.g., DeathStar blueprints) from the compromised Windows server.
+Post-Attack Cleanup: Cleared logs and removed traces of exploitation from both servers.
+**Conclusion:** This lab demonstrated how attackers can chain together multiple exploits, pivot through networks, and exfiltrate data while evading detection. It reinforced the need for robust firewall configurations, secure authentication practices, and regular patch management to prevent such attacks.
