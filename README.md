@@ -36,3 +36,33 @@ Replace FTP with SFTP/SCP
 Use SSH instead of Telnet
 Prefer IMAP over POP3
 **Conclusion:** While basic, this lab demonstrated why encryption matters. Seeing actual password extraction from packet captures makes textbook concepts tangible - you remember why we hash credentials after watching live credential harvesting.
+
+**Project 4: Enumerating Hosts Using Wireshark, Windows, and Linux Commands**
+**Objective:** Learn to enumerate resources on a target host using both passive and active scanning techniques.
+**Tools & Tech Stack**
+Wireshark: For passive scanning and packet analysis.
+Windows Commands: net and nbtstat for active enumeration.
+Linux Commands: ifconfig for interface configuration.
+Armitage & Metasploit: For visualizing network hosts and performing active scans.
+**Key Activities**
+This lab focused on enumeration, an essential step in penetration testing, by leveraging both passive and active methods:
+Passive Scanning with Wireshark: Captured network traffic to identify IP addresses, MAC addresses, and protocols used within the network. Filtered packets to analyze specific traffic patterns without alerting the target system.
+Active Enumeration with Commands: Used the net command on Windows to list users, domains, and shared resources. Ran nbtstat to query NetBIOS name resolution and uncover machine names and services.
+Leveraged Metasploit's db_nmap to scan the network (192.168.1.0/24) for live hosts and open ports.
+Graphical Scanning with Armitage: Conducted Nmap scans through Armitage's GUI to visualize discovered hosts and their services.
+**Conclusion:** Enumeration is a critical phase in ethical hacking that bridges reconnaissance and exploitation. Passive methods like Wireshark are stealthy but limited in scope, while active tools like nbtstat or Metasploit provide deeper insights at the cost of detectability. The lab emphasized balancing these approaches based on the engagement's goals.
+
+**Project 5: Remote and Local Exploitation**
+**Objective:** Exploit a vulnerable Postgres database service on a Linux server using advanced tools like OpenVAS, Greenbone Security Assistant, and Metasploit to gain privileged access.
+**Tools & Technologies Used**
+Nmap/Zenmap: For initial scanning of open ports and services.
+OpenVAS & Greenbone Security Assistant (GSA): To identify critical vulnerabilities in the target system.
+Metasploit Framework & Meterpreter: For exploiting vulnerabilities and privilege escalation.
+**Key Activities**
+This lab simulated a real-world penetration test through structured phases:
+Planning & Scanning: Conducted initial scans with Nmap/Zenmap to identify open ports (e.g., Postgres on port 5432). Used OpenVAS with GSA to pinpoint specific vulnerabilities in the Postgres database service.
+Exploitation with Metasploit:  Leveraged Metasploit modules to exploit the vulnerable Postgres service, gaining initial access to the target system.
+Privilege Escalation & Persistence: Used Meterpreter commands (hashdump, getuid) to escalate privileges to root access. Explored techniques for maintaining access while evading detection.
+Analysis of Results: Documented findings on exploited vulnerabilities and recommended mitigation strategies.
+**Conclusion:** This lab reinforced the importance of combining vulnerability scanning tools (like OpenVAS) with exploitation frameworks (like Metasploit) for effective penetration testing. It also highlighted how privilege escalation can turn minor vulnerabilities into critical security risks if left unaddressed.
+
