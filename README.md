@@ -173,3 +173,35 @@ Pivoting and Lateral Movement: Leveraged Meterpreter's autoroute feature to pivo
 Data Exfiltration Over Encrypted Channels: Stole sensitive data (e.g., DeathStar blueprints) from the compromised Windows server.
 Post-Attack Cleanup: Cleared logs and removed traces of exploitation from both servers.
 **Conclusion:** This lab demonstrated how attackers can chain together multiple exploits, pivot through networks, and exfiltrate data while evading detection. It reinforced the need for robust firewall configurations, secure authentication practices, and regular patch management to prevent such attacks.
+
+**Project 14: Using Public Key Encryption to Secure Messages**
+**Objective:** This lab focused on implementing public key encryption to protect sensitive data, demonstrating how PKI (Public Key Infrastructure) can be used to generate certificates, encrypt files, and secure email communication.
+**Key Tools and Terminologies**
+Public Key Infrastructure (PKI): A framework for managing public/private key pairs and digital certificates.
+Kleopatra: A GUI tool for managing OpenPGP certificates and keys.
+Opera Mail: Used for sending and receiving encrypted messages.
+Public/Private Keys: Asymmetric encryption keys used for securing communication.
+**Key Activities**
+Certificate Generation.
+Created public/private key pairs for a student and an administrator using Kleopatra.
+Exported the certificates and imported them into Windows for use in email encryption.
+Message Encryption and Decryption.
+Encrypted a message using the recipient’s public key in Opera Mail.
+Decrypted the received message using the recipient’s private key, ensuring confidentiality.
+Digital Signatures.
+Digitally signed messages with the sender’s private key to verify authenticity.
+Verified signatures using the sender’s public key.
+**Conclusion:** This lab demonstrated the practical application of public key encryption in securing communication. It highlighted how PKI ensures data confidentiality and integrity through encryption and digital signatures. The exercise emphasized the importance of certificate management in modern cybersecurity practices.
+
+**Project 15: Social Engineering Using SET**
+**Objective:** This lab simulated a social engineering attack, showcasing how attackers exploit human vulnerabilities through phishing techniques to compromise systems.
+**Key Tools and Terminologies**
+Social Engineering Toolkit (SET): A tool in Kali Linux designed for creating social engineering attacks.
+Spear Phishing: Targeted phishing attacks aimed at specific individuals or departments.
+Fake Websites: Used to deceive victims into revealing sensitive information or running malicious programs.
+**Key Activities**
+Setting Up the Attack Environment: Used SET to create a fake Facebook login page hosted on the Kali machine.
+Phishing Attack Execution: Sent a spear-phishing email containing a link to the fake website. Tricked the victim into entering their credentials on the fake page, which launched malware on their system.
+System Compromise and Data Exfiltration: Gained remote access to the victim’s Windows server after executing the exploit. Navigated the compromised system to steal sensitive data.
+Post-Attack Cleanup: Ensured traces of the attack were removed from logs to avoid detection.
+**Conclusion:** This lab highlighted the effectiveness of social engineering as an attack vector, emphasizing why user awareness training is critical in preventing such attacks. It also demonstrated how attackers can exploit human vulnerabilities to bypass technical defenses and gain unauthorized access.
