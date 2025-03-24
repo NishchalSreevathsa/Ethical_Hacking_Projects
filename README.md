@@ -11,7 +11,7 @@ Gaining Access: Used banner information from port 23 to obtain initial system cr
 Maintaining Access: Accessed the /etc/shadow file to retrieve the administrator's password hash, then used John the Ripper to crack it.
 Escalating Privileges: Used the cracked administrator credentials to log into the Windows Server via RDP, gaining full system access.
 **Conclusion:** This project demonstrated the ethical hacking process from initial reconnaissance to system compromise. It highlighted the importance of secure configurations and the potential vulnerabilities that can be exploited through external scanning and credential capture. The exercise emphasized the need for robust security measures, especially in firewall configurations and credential management.
-[File Link] (Lab 1 Performing Reconnaissance from the LAN - Nishchal.docx)
+[File Link] ()
 
 **Project 2: Scanning the Network on the LAN**
 **Objective:** Map local network hosts, identify vulnerabilities in a Postgres database system, and gain system access through credential escalation.
