@@ -161,7 +161,7 @@ Verified successful decryption by comparing encrypted vs. plaintext data in Wire
 **Conclusion:** This lab highlighted the weaknesses of older wireless encryption protocols like WEP, which can be easily cracked, as well as vulnerabilities in WPA when subjected to dictionary attacks. It emphasized the importance of using modern encryption standards like WPA3 for securing wireless networks.
 
 **Project 13: Attacking the Firewall and Stealing Data Over an Encrypted Channel**
-**Objective: **This lab simulated an attack on a web application behind a firewall, leveraging vulnerabilities to steal sensitive data over an encrypted channel.
+**Objective:** This lab simulated an attack on a web application behind a firewall, leveraging vulnerabilities to steal sensitive data over an encrypted channel.
 **Key Tools and Terminologies**
 Nmap/Zenmap: Scanned for open ports on the firewall (e.g., Apache WebDAV on port 80).
 Metasploit & Meterpreter Payloads: Exploited WebDAV vulnerabilities and pivoted within the internal network.
