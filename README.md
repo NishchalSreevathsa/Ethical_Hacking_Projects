@@ -30,11 +30,11 @@ After initial access, used Meterpreter's hashdump to extract credentials. The re
 **Practical Findings**
 Traffic Capture Setup:  Configured Kali's eth0 interface in promiscuous mode - a simple ifconfig eth0 promisc command that surprisingly caused initial driver issues on virtualized hardware.
 Protocol Analysis: Captured FTP/Telnet sessions revealed credentials transmitted openly. The SMTP analysis showed similar exposure - entire email bodies visible as plaintext.
-Security Implications
+Security Implications:
 Wireshark's filter syntax (ftp.request.command == PASS) made finding sensitive data efficient. The exercise drove home why modern systems:
-Replace FTP with SFTP/SCP
-Use SSH instead of Telnet
-Prefer IMAP over POP3
+Replace FTP with SFTP/SCP.
+Use SSH instead of Telnet.
+Prefer IMAP over POP3.
 **Conclusion:** While basic, this lab demonstrated why encryption matters. Seeing actual password extraction from packet captures makes textbook concepts tangible - you remember why we hash credentials after watching live credential harvesting.
 
 **Project 4: Enumerating Hosts Using Wireshark, Windows, and Linux Commands**
@@ -66,3 +66,26 @@ Privilege Escalation & Persistence: Used Meterpreter commands (hashdump, getuid)
 Analysis of Results: Documented findings on exploited vulnerabilities and recommended mitigation strategies.
 **Conclusion:** This lab reinforced the importance of combining vulnerability scanning tools (like OpenVAS) with exploitation frameworks (like Metasploit) for effective penetration testing. It also highlighted how privilege escalation can turn minor vulnerabilities into critical security risks if left unaddressed.
 
+**Project 6: Crafting and Deploying Malware Using a Remote Access Trojan (RAT)**
+**Objective:** This lab simulated a real-world attack scenario where we breached a network, gained unauthorized access, and established persistent control. The main goals were to scan for vulnerabilities, crack passwords, and deploy malware – all while evading detection.
+**Key Tools and Terminologies:**
+Nmap/Zenmap: Network scanning powerhouses.
+Bruter: A password-cracking GUI that saved us from command-line headaches
+DarkComet: The Remote Access Trojan (RAT) of choice for this exercise
+Remote Desktop Protocol (RDP): Our entry point once we had credentials
+**Key Activities:** Started by poking around the network from the outside, hunting for any open doors. Once we found RDP exposed, it was time to break out the digital lockpicks. Bruter did the heavy lifting, trying thousands of passwords until we struck gold. With admin access in hand, things got interesting. Crafted our malware using DarkComet, dressing it up to look like a harmless Firefox update. Sneaking it onto the target machine was a bit nerve-wracking – one wrong move and we'd blow our cover. The real thrill came when our RAT phoned home. Suddenly, we had full control of the compromised system. To prove the point, we snagged some "top-secret" files (in this case, totally fake Death Star plans).
+**Conclusion:** This lab was an eye-opener. It showed how a determined attacker can chain together seemingly small vulnerabilities to completely own a system. As defenders, we need to think like the bad guys – because they're definitely thinking about ways to outsmart us.
+
+**Project 7: Performing a Denial of Service Attack from the WAN**
+**Objective:** In this lab, we unleashed digital chaos (in a controlled environment, of course). The goal was to understand and execute various types of Denial of Service (DoS) attacks, seeing firsthand how they can cripple network services.
+**Key Tools and Terminologies:**
+Low Orbit Ion Cannon (LOIC): Our primary DoS weapon.
+tcpdump: For capturing the flood of packets we generated.
+capinfos: Helped us analyze just how much havoc we wreaked.
+TCP, UDP, and HTTP floods: Different flavors of digital firehoses.
+**Key Activities:** Kicked things off by setting up our packet-sniffing station to capture all the mayhem. Then, it was time to let LOIC loose. We launched three types of attacks:
+TCP Flood: Overwhelmed the target with a barrage of SYN packets.
+UDP Flood: Bombarded random ports with a deluge of datagrams.
+HTTP Flood: Drowned a web server in seemingly legitimate requests.
+After each attack, we dug into the captured traffic. The sheer volume of packets generated in such a short time was staggering.
+**Conclusion:** This lab hammered home why DoS attacks are such a headache for network defenders. It's frighteningly easy to bring services to their knees with the right tools. But more importantly, it highlighted the need for robust traffic analysis and filtering systems. In the real world, these attacks often serve as smoke screens for more subtle intrusions – so understanding them inside and out is crucial for any security pro.
