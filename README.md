@@ -89,3 +89,42 @@ UDP Flood: Bombarded random ports with a deluge of datagrams.
 HTTP Flood: Drowned a web server in seemingly legitimate requests.
 After each attack, we dug into the captured traffic. The sheer volume of packets generated in such a short time was staggering.
 **Conclusion:** This lab hammered home why DoS attacks are such a headache for network defenders. It's frighteningly easy to bring services to their knees with the right tools. But more importantly, it highlighted the need for robust traffic analysis and filtering systems. In the real world, these attacks often serve as smoke screens for more subtle intrusions – so understanding them inside and out is crucial for any security pro.
+
+**Project 8: Using Browser Exploitation to Take Over a Host's Computer**
+**Objective:** This lab simulated exploiting an Internet Explorer vulnerability to gain unauthorized access to a victim's machine. The goal was to understand how attackers can leverage browser flaws for system compromise.
+Key Tools and Terminologies: Metasploit Framework, Internet Explorer (vulnerable version), Meterpreter payload, Spear phishing techniques, John the Ripper password cracker, XAMPP web server.
+**Key Activities:**
+Set up a malicious exploit server using Metasploit on the Kali Linux machine.
+Crafted a convincing spear phishing email with a malicious link, masquerading as a legitimate Facebook message.
+Tricked the victim into clicking the link, triggering the IE vulnerability (ms08_078).
+Gained remote access through Meterpreter once the exploit succeeded.
+Performed post-exploitation tasks:
+Stole sensitive files (DeathStar blueprints).
+Dumped password hashes using Meterpreter's hashdump command.
+Cracked the administrator password with John the Ripper.
+Defaced the victim's website.
+**Conclusion:** This lab demonstrated the power of browser exploits when combined with social engineering. It highlighted why keeping browsers updated is crucial and how a single click on a malicious link can compromise an entire system. The exercise also showed the importance of post-exploitation actions in maintaining access and extracting valuable data.
+
+**Project 9: Attacking Webservers from the WAN**
+**Objective:** This lab simulated attacking a web server from an external network position, emphasizing the importance of securing internet-facing services.
+Key Tools and Terminologies: Nmap/Zenmap for network scanning, Bruter for password attacks, Remote Desktop Protocol (RDP), XAMPP web server, SMTP (Simple Mail Transfer Protocol)
+**Key Activities:**
+Scanned the WAN using Nmap to identify open ports, particularly focusing on SMTP.
+Used Bruter to perform a dictionary attack against SMTP, capturing admin credentials.
+Leveraged the stolen credentials to access the victim machine via RDP.
+Defaced the website hosted on the compromised server.
+Covered tracks by removing incriminating log entries.
+**Conclusion:** This exercise highlighted the risks of exposed services and weak authentication. It demonstrated how attackers can chain together reconnaissance, exploitation, and post-compromise actions to fully compromise a target. The importance of robust logging and intrusion detection was underscored by the ease of covering tracks.
+
+**Project 10: Exploiting a Vulnerable Web Applicatio**n
+**Objective:** This lab focused on exploiting a vulnerable web application, showcasing how attackers can leverage common misconfigurations to gain unauthorized access.
+**Key Tools and Terminologies:**
+Nmap for initial scanning, Armitage (GUI for Metasploit), XAMPP WebDAV vulnerability, Meterpreter payload, SMB (Server Message Block) protocol
+**Key Activities:**
+Used Nmap to identify open ports, particularly looking for Apache WebDAV services.
+Exploited the XAMPP WebDAV vulnerability using Metasploit through Armitage.
+Leveraged the compromised web server to pivot and attack an internal Windows server.
+Utilized an SMB vulnerability (MS09-50) to gain access to the Windows machine.
+Established persistence using Meterpreter.
+**Conclusion:** This lab demonstrated the dangers of misconfigured web applications and the potential for lateral movement within a network. It emphasized the need for proper patch management, secure configurations, and network segmentation. The exercise also showcased how attackers can chain multiple exploits to deeply penetrate a network.
+
