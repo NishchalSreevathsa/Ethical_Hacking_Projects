@@ -1,7 +1,7 @@
 # Ethical_Hacking_Projects
 This repository contains project reports from my ethical hacking learning journey on the Infosec Lab platform. Each report documents a specific lab exercise, its objectives, methodologies, tools used, and conclusions. Below is an overview of the Infosec Lab and summaries of each report.
 
-**Project 1: Performing Reconnaissance from the WAN** 
+**Lab 1: Performing Reconnaissance from the WAN** 
 **Objective:** Conduct external reconnaissance on a network, capture credentials, and compromise a system using the gathered information.
 **Tools & Tech:** Nmap, John the Ripper, Remote Desktop Protocol (RDP), Netcat/Telnet, pfSense firewall.
 **Summary:** The project involved several key steps in the ethical hacking process:
@@ -13,7 +13,7 @@ Escalating Privileges: Used the cracked administrator credentials to log into th
 **Conclusion:** This project demonstrated the ethical hacking process from initial reconnaissance to system compromise. It highlighted the importance of secure configurations and the potential vulnerabilities that can be exploited through external scanning and credential capture. The exercise emphasized the need for robust security measures, especially in firewall configurations and credential management.
 [File Link] (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%201%20Performing%20Reconnaissance%20from%20the%20LAN%20-%20Nishchal.docx)
 
-**Project 2: Scanning the Network on the LAN**
+**Lab 2: Scanning the Network on the LAN**
 **Objective:** Map local network hosts, identify vulnerabilities in a Postgres database system, and gain system access through credential escalation.
 **Tools & Tech Stack:** Kali Linux OS, Nmap (SYN/Ping scans), Metasploit Framework, Armitage GUI, PostgreSQL.
 **Key Activities:** This exercise focused on internal network reconnaissance through three phases:
@@ -26,7 +26,7 @@ After initial access, used Meterpreter's hashdump to extract credentials. The re
 **Conclusion:** The lab highlighted how outdated database systems become easy targets. While automated tools like Armitage streamline exploitation, manual analysis of scan results (like service versions) proved crucial for identifying viable attack vectors.
 [File Link] (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%202%20Scanning%20the%20Network%20on%20the%20Lan%20-%20Nishchal.docx)
 
-**Project 3: Capturing and Analyzing Network Traffic Using a Sniffer**
+**Lab 3: Capturing and Analyzing Network Traffic Using a Sniffer**
 **Objective:** Capture and analyze cleartext protocol traffic to understand network communication vulnerabilities.
 **Tools Used:** Wireshark 4.2, ifconfig (promiscuous mode setup), Legacy protocols: FTP, Telnet, POP3
 **Practical Findings**
@@ -40,7 +40,7 @@ Prefer IMAP over POP3.
 **Conclusion:** While basic, this lab demonstrated why encryption matters. Seeing actual password extraction from packet captures makes textbook concepts tangible - you remember why we hash credentials after watching live credential harvesting.
 [File Link] (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%203%20Capturing%20and%20analyzing%20network%20traffic%20using%20a%20sniffer%20-%20Nishchal.docx)
 
-**Project 4: Enumerating Hosts Using Wireshark, Windows, and Linux Commands**
+**Lab 4: Enumerating Hosts Using Wireshark, Windows, and Linux Commands**
 **Objective:** Learn to enumerate resources on a target host using both passive and active scanning techniques.
 **Tools & Tech Stack**
 Wireshark: For passive scanning and packet analysis.
@@ -56,7 +56,7 @@ Graphical Scanning with Armitage: Conducted Nmap scans through Armitage's GUI to
 **Conclusion:** Enumeration is a critical phase in ethical hacking that bridges reconnaissance and exploitation. Passive methods like Wireshark are stealthy but limited in scope, while active tools like nbtstat or Metasploit provide deeper insights at the cost of detectability. The lab emphasized balancing these approaches based on the engagement's goals.
 [File Link] (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%204%20Enumerating%20Hosts%20Using%20Wireshark%2C%20Windows%2C%20and%20Linux%20Commands%20-%20Nishchal.docx)
 
-**Project 5: Remote and Local Exploitation**
+**Lab 5: Remote and Local Exploitation**
 **Objective:** Exploit a vulnerable Postgres database service on a Linux server using advanced tools like OpenVAS, Greenbone Security Assistant, and Metasploit to gain privileged access.
 **Tools & Technologies Used**
 Nmap/Zenmap: For initial scanning of open ports and services.
@@ -72,7 +72,7 @@ Analysis of Results: Documented findings on exploited vulnerabilities and recomm
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%205%20Remote%20and%20Local%20Exploitation%20-%20Nishchal.docx)
 
-**Project 6: Crafting and Deploying Malware Using a Remote Access Trojan (RAT)**
+**Lab 6: Crafting and Deploying Malware Using a Remote Access Trojan (RAT)**
 **Objective:** This lab simulated a real-world attack scenario where we breached a network, gained unauthorized access, and established persistent control. The main goals were to scan for vulnerabilities, crack passwords, and deploy malware – all while evading detection.
 **Key Tools and Terminologies:**
 Nmap/Zenmap: Network scanning powerhouses.
@@ -84,7 +84,7 @@ Remote Desktop Protocol (RDP): Our entry point once we had credentials
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%206%20Crafting%20and%20Deploying%20Malware%20Using%20a%20Remote%20Access%20Trojan(RAT)%20-%20Nishchal.docx)
 
-**Project 7: Performing a Denial of Service Attack from the WAN**
+**Lab 7: Performing a Denial of Service Attack from the WAN**
 **Objective:** In this lab, we unleashed digital chaos (in a controlled environment, of course). The goal was to understand and execute various types of Denial of Service (DoS) attacks, seeing firsthand how they can cripple network services.
 **Key Tools and Terminologies:**
 Low Orbit Ion Cannon (LOIC): Our primary DoS weapon.
@@ -100,7 +100,7 @@ After each attack, we dug into the captured traffic. The sheer volume of packets
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%207%20Performing%20a%20Denial%20of%20Service%20Attack%20from%20the%20WAN%20-%20Nishchal.docx)
 
-**Project 8: Using Browser Exploitation to Take Over a Host's Computer**
+**Lab 8: Using Browser Exploitation to Take Over a Host's Computer**
 **Objective:** This lab simulated exploiting an Internet Explorer vulnerability to gain unauthorized access to a victim's machine. The goal was to understand how attackers can leverage browser flaws for system compromise.
 Key Tools and Terminologies: Metasploit Framework, Internet Explorer (vulnerable version), Meterpreter payload, Spear phishing techniques, John the Ripper password cracker, XAMPP web server.
 **Key Activities:**
@@ -117,7 +117,7 @@ Defaced the victim's website.
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%208%20Using%20Browser%20Exploitation%20to%20Take%20Over%20-%20Nishchal.docx)
 
-**Project 9: Attacking Webservers from the WAN**
+**Lab 9: Attacking Webservers from the WAN**
 **Objective:** This lab simulated attacking a web server from an external network position, emphasizing the importance of securing internet-facing services.
 Key Tools and Terminologies: Nmap/Zenmap for network scanning, Bruter for password attacks, Remote Desktop Protocol (RDP), XAMPP web server, SMTP (Simple Mail Transfer Protocol)
 **Key Activities:**
@@ -130,7 +130,7 @@ Covered tracks by removing incriminating log entries.
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%209%20Attacking%20Web%20Servers%20from%20the%20WAN%20-%20Nishchal.docx)
 
-**Project 10: Exploiting a Vulnerable Web Applicatio**n
+**Lab 10: Exploiting a Vulnerable Web Applicatio**n
 **Objective:** This lab focused on exploiting a vulnerable web application, showcasing how attackers can leverage common misconfigurations to gain unauthorized access.
 **Key Tools and Terminologies:**
 Nmap for initial scanning, Armitage (GUI for Metasploit), XAMPP WebDAV vulnerability, Meterpreter payload, SMB (Server Message Block) protocol
@@ -144,7 +144,7 @@ Established persistence using Meterpreter.
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%2010%20Exploiting%20a%20Vulnerable%20Web%20Application%20-%20Nishchal.docx)
 
-**Project 11: Performing SQL Injection to Manipulate Tables in a Database**
+**Lab 11: Performing SQL Injection to Manipulate Tables in a Database**
 **Objective:**  This lab focused on exploiting a MySQL database through SQL injection techniques, aiming to gain unauthorized access, manipulate database tables, and create a backdoor for persistent control.
 **Key Tools and Terminologies:** 
 Nmap: Used for scanning the network to identify open ports (e.g., port 3306 for MySQL). 
@@ -160,7 +160,7 @@ Post-Exploitation Tasks: Manipulated tables in the database and maintained unaut
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%2011%20Performing%20SQL%20Injection%20to%20Manipulate%20Tables%20in%20a%20Database%20-%20Nishchal.docx)
 
-**Project 12: Breaking WEP and WPA and Decrypting the Traffic**
+**Lab 12: Breaking WEP and WPA and Decrypting the Traffic**
 **Objective:** This lab explored vulnerabilities in wireless security protocols (WEP and WPA), focusing on decrypting wireless traffic using tools in Kali Linux.
 **Key Tools and Terminologies**
 iwconfig & airmon-ng: Tools for configuring wireless interfaces and enabling monitor mode.
@@ -180,7 +180,7 @@ Verified successful decryption by comparing encrypted vs. plaintext data in Wire
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%2012%20Breaking%20WEP%20and%20WPA%20and%20Decrypting%20-%20Nishchal.docx)
 
-**Project 13: Attacking the Firewall and Stealing Data Over an Encrypted Channel**
+**Lab 13: Attacking the Firewall and Stealing Data Over an Encrypted Channel**
 **Objective:** This lab simulated an attack on a web application behind a firewall, leveraging vulnerabilities to steal sensitive data over an encrypted channel.
 **Key Tools and Terminologies**
 Nmap/Zenmap: Scanned for open ports on the firewall (e.g., Apache WebDAV on port 80).
@@ -196,7 +196,7 @@ Post-Attack Cleanup: Cleared logs and removed traces of exploitation from both s
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%2013%20Attacking%20the%20Firewall%20and%20Stealing%20Data%20-%20Nishchal.docx)
 
-**Project 14: Using Public Key Encryption to Secure Messages**
+**Lab 14: Using Public Key Encryption to Secure Messages**
 **Objective:** This lab focused on implementing public key encryption to protect sensitive data, demonstrating how PKI (Public Key Infrastructure) can be used to generate certificates, encrypt files, and secure email communication.
 **Key Tools and Terminologies**
 Public Key Infrastructure (PKI): A framework for managing public/private key pairs and digital certificates.
@@ -217,7 +217,7 @@ Verified signatures using the sender’s public key.
 [File Link] 
 (https://github.com/NishchalSreevathsa/Ethical_Hacking_Projects/blob/f5fc6c183b2836f4f10cf3829280bb2b5ebaf27f/Lab%2014%20Using%20Public%20Key%20Encryption%20to%20Secure%20Messages-%20Nishchal.docx)
 
-**Project 15: Social Engineering Using SET**
+**Lab 15: Social Engineering Using SET**
 **Objective:** This lab simulated a social engineering attack, showcasing how attackers exploit human vulnerabilities through phishing techniques to compromise systems.
 **Key Tools and Terminologies**
 Social Engineering Toolkit (SET): A tool in Kali Linux designed for creating social engineering attacks.
